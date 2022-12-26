@@ -14,3 +14,9 @@ function startwordpress_google_fonts() {
 }
 
 add_action('wp_print_styles', 'startwordpress_google_fonts');
+
+// Custom settings
+function custom_settings_add_menu() {
+	add_menu_page( 'Custom Settings', 'Custom Settings', 'manage_options', 'custom-settings', 'custom_settings_page', null, 99 );
+}
+add_action( 'admin_menu', 'custom_settings_add_menu' );
