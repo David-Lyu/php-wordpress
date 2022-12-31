@@ -131,3 +131,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
+
+//Enable error logging.
+@ini_set('log_errors', 'On');
+@ini_set('error_log', '/var/www/html/wp-content/elm-error-logs/php-errors.log');
+
+//Don't show errors to site visitors.
+@ini_set('display_errors', 'Off');
+if ( !defined('WP_DEBUG_DISPLAY') ) {
+	define('WP_DEBUG_DISPLAY', false);
+}

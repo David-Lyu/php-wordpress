@@ -1,4 +1,5 @@
 <?php
+
 /* This is a hook */
 function startwordpress_scripts() {
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.6' );
@@ -20,3 +21,9 @@ function custom_settings_add_menu() {
 	add_menu_page( 'Custom Settings', 'Custom Settings', 'manage_options', 'custom-settings', 'custom_settings_page', null, 99 );
 }
 add_action( 'admin_menu', 'custom_settings_add_menu' );
+
+include '../../wp-content/custom-plugins/custom-post-type.php';
+use Custom_Types;
+// new Custom_Types\Recipe();
+// add_action( 'init', array($recipeCustomPostType, 'recipe_init') );
+// add_filter( 'post_updated_messages', array($recipeCustomPostType, 'recipe_updated_messages') );
