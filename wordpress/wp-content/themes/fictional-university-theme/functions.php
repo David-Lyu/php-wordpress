@@ -22,8 +22,8 @@ function custom_settings_add_menu() {
 }
 add_action( 'admin_menu', 'custom_settings_add_menu' );
 
-include '../../wp-content/custom-plugins/custom-post-type.php';
-use Custom_Types;
-// new Custom_Types\Recipe();
+// include '../../wp-content/custom-plugins/custom-post-type.php';
+// use CustomPlugin\PostType;
+// new Recipe();
 // add_action( 'init', array($recipeCustomPostType, 'recipe_init') );
 // add_filter( 'post_updated_messages', array($recipeCustomPostType, 'recipe_updated_messages') );

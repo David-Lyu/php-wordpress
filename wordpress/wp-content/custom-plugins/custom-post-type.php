@@ -1,5 +1,5 @@
 <?php
-namespace Custom_Types;
+namespace CustomPlugin\PostType;
 class Recipe
 {
   function recipe_init() {
